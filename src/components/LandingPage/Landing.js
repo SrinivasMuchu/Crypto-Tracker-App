@@ -7,7 +7,8 @@ import Button from '../Common/Button/Button'
 import ShareSharpIcon from '@mui/icons-material/ShareSharp';
 import DashboardCustomizeRoundedIcon from '@mui/icons-material/DashboardCustomizeRounded';
 import { RWebShare } from "react-web-share";
-import Dashboard from '../pages/Dashboard'
+import Dashboard from '../pages/Dashboard';
+
 
 function Landing() {
     return (

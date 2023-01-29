@@ -31,6 +31,7 @@ function Watchlist() {
         <div>
           <h1 style={{ textAlign: "center" }}>
             Sorry, No Items In The Watchlist.
+            Please click on the favourite in dasboard to add to watchlist
           </h1>
           <div
             style={{

@@ -4,6 +4,7 @@ import MenuDrawer from './Drawer'
 import './TopBar.css'
 import { motion } from 'framer-motion'
 import Switch from "@mui/material/Switch";
+import { toast } from "react-toastify";
 
 
 function TitleCard() {
@@ -26,6 +27,7 @@ function TitleCard() {
       setLight();
     }
     setDarkMode(!darkMode);
+    toast.success("Theme Changed!");
   };
   const setDark = () => {
     localStorage.setItem("theme", "dark");
