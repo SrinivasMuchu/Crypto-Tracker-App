@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './Grid.css';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import StarIcon from "@mui/icons-material/Star";
+import { AddWatchlist } from '../../Functions/AddedWatchlist';
+import { RemoveFromWatchlist } from '../../Functions/RemoveWatchlist';
 
 
 function Grid({ coin, delay }) {
+  const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+  const [isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(coin.id));
   return (
     <a href={`/coin/${coin.id}`}>
       <div
@@ -19,6 +25,23 @@ function Grid({ coin, delay }) {
             <p className="coin-symbol">{coin.symbol}</p>
             <p className="coin-name">{coin.name}</p>
           </div>
+          <div
+              className={`watchlist-icon ${
+                coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+              }`}
+              onClick={(e) => {
+                if (isCoinAdded) {
+                  // remove coin
+
+                  RemoveFromWatchlist(e, coin.id, setIsCoinAdded);
+                } else {
+                  setIsCoinAdded(true);
+                  AddWatchlist(e, coin.id);
+                }
+              }}
+            >
+              {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
+            </div>
         </div>
         {coin.price_change_percentage_24h >= 0 ? (
           <div className="chip-flex">

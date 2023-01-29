@@ -107,4 +107,19 @@
   .current-price-red {
     color: var(--red) !important;
   }
+  .watchlist-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 50%;
+    color: green;
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+  }
   
+  .watchlist-icon-red {
+    border: 2px solid red;
+    color: red;
+  }

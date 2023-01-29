@@ -8,8 +8,8 @@ function TopButton() {
 
   function scrollFunction() {
     if (
-      document.body.scrollTop > 500 ||
-      document.documentElement.scrollTop > 500
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       mybutton.style.display = "flex";
     } else {

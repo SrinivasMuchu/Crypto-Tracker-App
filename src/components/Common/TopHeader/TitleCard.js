@@ -1,13 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState }  from 'react'
 import Button from '../Button/Button'
 import MenuDrawer from './Drawer'
 import './TopBar.css'
 import { motion } from 'framer-motion'
+import Switch from "@mui/material/Switch";
+
 
 function TitleCard() {
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") == "dark" ? true : false
+  );
+
+  useEffect(() => {
+    if (localStorage.getItem("theme") == "dark") {
+      setDark();
+    } else {
+      setLight();
+    }
+  }, []);
+
+  const changeMode = () => {
+    if (localStorage.getItem("theme") != "dark") {
+      setDark();
+    } else {
+      setLight();
+    }
+    setDarkMode(!darkMode);
+  };
+  const setDark = () => {
+    localStorage.setItem("theme", "dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+  };
+
+  const setLight = () => {
+    localStorage.setItem("theme", "light");
+    document.documentElement.setAttribute("data-theme", "light");
+  };
   return (
     <div className="header">
-      
+       
       <motion.h1
         className="title"
         initial={{ opacity: 0, x: -50 }}
@@ -21,6 +52,7 @@ function TitleCard() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', duration: 1 }}
         >
+          <Switch checked={darkMode} onClick={() => changeMode()} />
           <a href="/">
             <p className="link">Home</p>
           </a>

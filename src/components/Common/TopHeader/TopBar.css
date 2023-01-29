@@ -30,7 +30,7 @@
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
-    color: white;
+    color: var(--white);
   }
   .drawer-component {
     display: none;
@@ -49,9 +49,9 @@
       padding: 0.5rem 1.5rem;
     }
     .link:hover{
-      -ms-transform: scale(1);
+      /* -ms-transform: scale(1);
     -webkit-transform: scale(1); 
-    transform: scale(1); 
+    transform: scale(1);  */
         color: var(--white);
     }
     .drawer-div {

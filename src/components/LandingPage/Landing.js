@@ -7,6 +7,7 @@ import Button from '../Common/Button/Button'
 import ShareSharpIcon from '@mui/icons-material/ShareSharp';
 import DashboardCustomizeRoundedIcon from '@mui/icons-material/DashboardCustomizeRounded';
 import { RWebShare } from "react-web-share";
+import Dashboard from '../pages/Dashboard'
 
 function Landing() {
     return (
@@ -43,7 +44,10 @@ function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", duration: 1 }}
           >
-            <button className='share-btn'><DashboardCustomizeRoundedIcon/>&nbsp;dashboard</button>
+            <a href="/dashboard">
+            <button className='share-btn'><DashboardCustomizeRoundedIcon />&nbsp;dashboard</button>
+          </a>
+            
            
             <RWebShare
             data={{

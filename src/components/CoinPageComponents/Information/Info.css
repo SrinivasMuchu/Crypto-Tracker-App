@@ -1,0 +1,15 @@
+.info-component h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .info-p a {
+    text-decoration: underline;
+    color: var(--green);
+  }
+  
+  .info-p a:hover {
+    color: var(--green) !important;
+    transition: all 0.3s;
+  }
+  
