@@ -33,7 +33,7 @@
     margin-top: 1.5rem;
   }
   .share-btn{
-    color: aliceblue;
+    color: var(--white);
     text-align: center;
     background-color: var(--black);
     padding: 0.45rem 1.5rem;
