@@ -9,11 +9,11 @@ import { toast } from "react-toastify";
 
 function TitleCard() {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") == "dark" ? true : false
+    localStorage.getItem("theme") === "dark" ? true : false
   );
 
   useEffect(() => {
-    if (localStorage.getItem("theme") == "dark") {
+    if (localStorage.getItem("theme") === "dark") {
       setDark();
     } else {
       setLight();
@@ -21,7 +21,7 @@ function TitleCard() {
   }, []);
 
   const changeMode = () => {
-    if (localStorage.getItem("theme") != "dark") {
+    if (localStorage.getItem("theme") !== "dark") {
       setDark();
     } else {
       setLight();

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../Common/Button/Button";
 import TitleCard from "../Common/TopHeader/TitleCard";
+import Footer from "../Common/FooterBox/Footer";
 import LabTabs from '../DashboardComponents/Tabs/Tabs';
 import {Get200Coins} from "../Functions/Get200Coins"
 
@@ -46,6 +47,7 @@ function Watchlist() {
           </div>
         </div>
       )}
+      <Footer/>
     </div>
   )
 }

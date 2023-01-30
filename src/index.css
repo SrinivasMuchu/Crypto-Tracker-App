@@ -40,3 +40,22 @@ code {
   --grey: #888;
   --darkgrey: #f3f3f3;
 }
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+::selection {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 10px;
+}

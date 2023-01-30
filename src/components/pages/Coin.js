@@ -6,6 +6,7 @@ import SelectDays from "../CoinPageComponents/DateRange/Days";
 import ToggleComponents from "../CoinPageComponents/ToggleButtons/Toggle";
 import Button from "../Common/Button/Button";
 import TitleCard from "../Common/TopHeader/TitleCard";
+import Footer from '../Common/FooterBox/Footer'
 import Loading from "../Common/Loading/Loading";
 import List from "../DashboardComponents/List/List";
 import { GetCoinData } from "../Functions/GetcoinData";
@@ -99,7 +100,9 @@ function Coin() {
         </div>
       ) : (
         <TitleCard />
+        
       )}
+      <Footer/>
     </>
   );
 }

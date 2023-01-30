@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import axios from "axios";
 import Loading from '../Common/Loading/Loading';
 import TitleCard from '../Common/TopHeader/TitleCard';
+import Footer from '../Common/FooterBox/Footer';
 import Search from '../DashboardComponents/SearchBar/Search';
 import LabTabs from '../DashboardComponents/Tabs/Tabs';
 import PageDivision from '../DashboardComponents/PageDivision/PageDivision';
@@ -69,6 +70,7 @@ function Dashboard() {
           )}
         </>)}
         <TopButton/>
+        <Footer/>
     </div>
   )
 }

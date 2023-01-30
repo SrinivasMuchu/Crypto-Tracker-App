@@ -3,7 +3,7 @@ import Info from "../CoinPageComponents/Information/Info";
 import LineChart from "../CoinPageComponents/Chart/LineChart";
 
 import ToggleComponents from "../CoinPageComponents/ToggleButtons/Toggle";
-
+import Footer from "../Common/FooterBox/Footer";
 import TitleCard from "../Common/TopHeader/TitleCard";
 import Loading from "../Common/Loading/Loading";
 import List from "../DashboardComponents/List/List";
@@ -134,6 +134,7 @@ function Compare() {
             <Info title={coin2Data.name} desc={coin2Data.desc} />
           </>
         )}
+        <Footer/>
       </div>
     );
   }

@@ -50,13 +50,14 @@ function Landing() {
           </a>
             
            
-            <RWebShare
+          <RWebShare
             data={{
-              text: "Checkout my crypto tracker made using React!",
-              title: "Crypto Tracker",
+              text: "Crypto Dashboard made using React JS.",
+              url: "https://crypto-tracker-app-liard.vercel.app/",
+              title: "CryptoDashboard.",
             }}
             onClick={() => console.log("shared successfully!")}
-          >            
+          >        
           <button className='share-btn'><ShareSharpIcon/>&nbsp;Share</button>
           </RWebShare>
           </motion.div>
